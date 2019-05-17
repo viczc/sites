@@ -1,0 +1,86 @@
+.mdc-floating-label {
+    background-color: transparent !important;
+}
+
+.comment-form-main {
+    margin-bottom: 25px;
+    textarea {
+        height: 70px !important;
+        min-height: 70px;
+    }
+    .comment-form-fields {
+        width: 100%;
+        display: inline-block;
+        .mdc-text-field {
+            margin-top: 0;
+        }
+    }
+}
+
+.comment-list {
+    padding: 0;
+    li {
+        list-style: none;
+    }
+    .comment-child{
+        padding-left: 50px;
+    }
+}
+
+.comment-body {
+    display: flex;
+    min-height: 60px;
+    margin: 15px 0;
+    .comment-avatar {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: $gray-light no-repeat;
+        background-size: contain;
+    }
+    .comment-author a {
+        color: $gray-deep;
+    }
+    .comment-by-author:after {
+        vertical-align: text-top;
+        margin-left: 5px;
+        padding: 0 4px;
+        font-size: 12px;
+        color: white;
+        content: "博主";
+        background: $gray-middle;
+        border-radius: 3px
+    }
+    .comment-metadata {
+        font-size: 12px;
+        color: $gray-middle
+    }
+    .comment-actions {
+        visibility: hidden;
+        opacity: 0;
+        font-size: 12px;
+        transition: .3s;
+        a {
+            margin-left: .7em;
+            color: $gray-middle;
+            &:hover {
+                color: var(--mdc-theme-primary);
+            }
+        }
+    }
+    &:hover .comment-actions {
+        visibility: visible;
+        opacity: 1
+    }
+    .comment-content {
+        flex: 1;
+        word-wrap: break-word;
+        p {
+            margin: .2em 0
+        }
+        a {
+            color: $gray-deep;
+        }
+    }
+}
